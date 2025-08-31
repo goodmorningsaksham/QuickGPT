@@ -62,7 +62,7 @@ export const imageMessageController = async (req,res) => {
             role: "user", 
             content: prompt,
             timestamp: Date.now(),
-            isImage: false})
+            isImage: true})
 
         //Encode the prompt
         const encodedPrompt = encodeURIComponent(prompt)

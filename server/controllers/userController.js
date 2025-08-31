@@ -1,6 +1,7 @@
 import User from "../models/User.js";
 import jwt from 'jsonwebtoken'
-
+import bcrypt from 'bcryptjs'
+import { protect } from "../middlewares/auth.js";
 //Generate JWT
 const generateToken = (id)=>{
     return jwt.sign({id}, process.env.JWT_SECRET, {
